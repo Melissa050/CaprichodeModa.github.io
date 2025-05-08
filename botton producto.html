@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caprichos de moda</title>
+    <link rel="stylesheet" href="Style.CSS">
+    <link rel="stylesheet" href="style.css2.css">
+  
+</head>
+<body>
+
+
+   
+
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="ChatGPT_Image_29_abr_2025__11_14_35_a.m.-removebg-preview.png" alt="Logo de la tienda" style="width: 100px;" />
+        </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li> <a href="botton producto.html">Otros Productos</a></li>
+                <li><a href="botton sobre nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="botton contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </body>
+    </html>
+
+    <div class="search-container">
+        <input type="text" id="searchBar" placeholder="Buscar productos..." onkeyup="searchProducts()">
+    </div>
+    
+
+
+
+    <div class="product-container">
+        <!-- Producto 1 -->
+        <div class="product">
+            <img class="product-image" src="Pelela 3 en 1.jpg" alt="Pelela 3 en 1 para bebé">
+            <div class="product-info">
+                <p>Pelela multifuncional 3 en 1, ideal para el entrenamiento del baño.</p>
+                <p class="price">$225 DOP</p>
+                <button class="btn" onclick="addToCart('Pelela 3 en 1', 225)">Comprar Producto</button>
+
+            </div>
+        </div>
+    
+        <!-- Producto 2 -->
+        <div class="product">
+            <img class="product-image" src="Mustela Newborn Gift Set.jpg" alt="Set de regalo para recién nacidos Mustela">
+            <div class="product-info">
+                <p>Set de cuidado Mustela para recién nacidos, con productos esenciales para la piel del bebé.</p>
+                <p class="price">$500 DOP</p>
+                <button class="btn">Comprar Producto</button>
+            </div>
+        </div>
+    
+        <!-- Producto 3 -->
+        <div class="product">
+            <img class="product-image" src="Lictin - Set para Cuidado del Bebé -12 Piezas Kit.jpg" alt="Kit de cuidado del bebé Lictin">
+            <div class="product-info">
+                <p>Kit de higiene para bebés con 12 piezas esenciales, seguro y práctico.</p>
+                <p class="price">$400 DOP</p>
+                <button class="btn">Comprar Producto</button>
+            </div>
+        </div>
+    
+        <!-- Producto 4 -->
+        <div class="product">
+            <img class="product-image" src="Andadera De Bebe Interactiva Musical Portatil Pleglabe 3en1 - $ 999_99.jpg" alt="Andadera de bebé interactiva 3 en 1">
+            <div class="product-info">
+                <p>Andadera musical 3 en 1 portátil y plegable, perfecta para el desarrollo del bebé.</p>
+                <p class="price">$350 DOP</p>
+                <button class="btn">Comprar Producto</button>
+            </div>
+        </div>
+    
+        <!-- Producto 5 -->
+        <div class="product">
+            <img class="product-image" src="86e5845a-e75e-4623-b061-4dcffcd2e14e.jpg" alt="Conjunto de ropa para bebé">
+            <div class="product-info">
+                <p>Juguete para entretener tu pequeña.</p>
+                <p class="price">$400 DOP</p>
+                <button class="btn">Comprar Producto</button>
+            </div>
+        </div>
+    
+        <!-- Producto 6 -->
+        <div class="product">
+            <img class="product-image" src="63a95975-0c6f-4fe7-9c5a-5c18401ccaf6.jpg" alt="Set de ropa para recién nacido">
+            <div class="product-info">
+                <p>Asiento para tu bebe.</p>
+                <p class="price">$1,000 DOP</p>
+                <button class="btn">Comprar Producto</button>
+            </div>
+        </div>
+    
+        <!-- Producto 7 -->
+        <div class="product">
+            <img class="product-image" src="9b218f1f-19a0-4a5c-9659-eaed646f5735.jpg" alt="Vestido para niña elegante">
+            <div class="product-info">
+                <p>Juguete para que tu pequeño se entretenga.</p>
+                <p class="price">$700 DOP</p>
+                <button class="btn">Comprar Producto</button>
+            </div>
+        </div>
+    
+        <!-- Producto 8 -->
+        <div class="product">
+            <img class="product-image" src="2d70ccf0-80db-401d-8bf4-9c8f48eb7bf5.jpg" alt="Set de ropa para bebé">
+            <div class="product-info">
+                <p>Set de ropa para bebé con diseño adorable y tejido cómodo.</p>
+                <p class="price">$800 DOP</p>
+                <button class="btn">Comprar Producto</button>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        // Función para normalizar el texto y quitar acentos
+        function normalizeText(text) {
+            return text
+                .toLowerCase()
+                .normalize("NFD") // descompone acentos
+                .replace(/[\u0300-\u036f]/g, "") // remueve los acentos
+                .replace(/[^\w\s]/gi, ""); // remueve signos de puntuación
+        }
+        
+        function searchProducts() {
+            const input = normalizeText(document.getElementById('searchBar').value);
+            const products = document.querySelectorAll('.product');
+        
+            products.forEach(product => {
+                const productText = normalizeText(product.textContent);
+                if (productText.includes(input)) {
+                    product.style.display = "";
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        }
+        </script>
+        
+    
+
+   
+</body>
+</html>
